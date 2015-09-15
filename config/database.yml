@@ -56,12 +56,14 @@ test:
 #
 staging:
   <<: *default
+  host: gameband-dev.cjjqneutzjjr.ap-northeast-1.rds.amazonaws.com
   database: gameband_staging
   username: gameband
   password: <%= ENV['GAMEBAND_API_DATABASE_PASSWORD'] %>
 
 production:
   <<: *default
+  host: gameband-dev.cjjqneutzjjr.ap-northeast-1.rds.amazonaws.com
   database: gameband_production
   username: gameband
   password: <%= ENV['GAMEBAND_API_DATABASE_PASSWORD'] %>
