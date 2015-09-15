@@ -1,0 +1,39 @@
+/usr/local/rbenv/versions/2.2.1/bin/ruby -r ./siteconf20150825-12165-penuxa.rb extconf.rb
+checking for main() in -lpthread... yes
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling accessor.cc
+compiling gc.cc
+compiling array.cc
+compiling v8.cc
+compiling heap.cc
+compiling message.cc
+compiling stack.cc
+compiling handles.cc
+compiling constants.cc
+compiling function.cc
+compiling context.cc
+compiling constraints.cc
+compiling value.cc
+compiling backref.cc
+compiling init.cc
+compiling trycatch.cc
+compiling rr.cc
+compiling date.cc
+compiling script.cc
+compiling object.cc
+compiling external.cc
+compiling locker.cc
+compiling string.cc
+compiling exception.cc
+compiling template.cc
+compiling primitive.cc
+compiling invocation.cc
+compiling signature.cc
+linking shared-object v8/init.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 init.so ./.gem.20150825-12165-uvlsu5/v8

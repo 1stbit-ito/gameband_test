@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTMLファイルからPOSTでJSONデータを送信する</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        $("#response").html("Response Values");
+
+        $("#button").click( function(){
+            var url = $("#url_post").val();
+            
+            entry_tags_ids = $("#entry_tags_ids").val().split(",");
+            entry_reply_to= $("#entry_reply_to").val().split(",");
+
+            var JSONdata = {
+              "entry" : {
+                "entry_user_id" : $("#entry_user_id").val(),
+                "game_id" : $("#entry_game_id").val(),
+                "content" : $("#entry_content").val(),
+                "entry_tags_ids" : entry_tags_ids,
+                "entry_reply_to" : entry_reply_to,
+                "parent_id" : "test_parent_id"
+              },
+              "timeline_type" : $("#timeline_type").val()
+            };
+
+
+
+//          alert(JSON.stringify(JSONdata));
+
+            $.ajax({
+                type : 'post',
+                url : url,
+                data : JSON.stringify(JSONdata),
+                contentType: 'application/JSON',
+                dataType : 'JSON',
+                scriptCharset: 'utf-8',
+                success : function(data) {
+
+                    // Success
+//                    alert("success");
+//                    alert(JSON.stringify(data));
+                    $("#response").html(JSON.stringify(data));
+                },
+                error : function(data) {
+
+                    // Error
+                    alert("error");
+                    alert(JSON.stringify(data));
+                    $("#response").html(JSON.stringify(data));
+                }
+            });
+        })
+    })
+</script>
+
+</head>
+<body>
+    <h1>HTMLファイルからPOSTでJSONデータを送信する</h1>
+    <p>URL: <input type="text" id="url_post" name="url" size="100" value="http://192.168.33.172/entries"></p>
+    <p>USER_ID: <input type="text" id="entry_user_id" size="30" name="entry[entry_user_id]" value="7e4c28be3b084fa1"></p>
+    <p>GAME_ID: <input type="text" id="entry_game_id" size="30" name="entry[game_id]" value="1"></p>
+    <p>TIMELINE_TYPE: <input type="text" id="timeline_type" size="30" name="timeline_type" value="1"></p>
+    <p>CONTENT: <input type="text" id="entry_content" size="30" name="entry[content]" value="asdfghjklqwertyyuiopmnbvcxzazqwwsedlojirge"></p>
+    <p>HASHTAG: <input type="text" id="entry_tags_ids" size="30" name="entry[entry_tags_ids]" value="1,2,3,4"></p>
+    <p>REPLYTO: <input type="text" id="entry_reply_to" size="30" name="entry[entry_reply_to]" value="@testtest,@12341234,@hfueabbi"></p>
+    <p><button id="button" type="button">submit</button></p>
+    <textarea id="response" cols=120 rows=10 disabled></textarea>
+</body>
+</html>

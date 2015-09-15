@@ -1,0 +1,1 @@
+json.extract! @timeline, :id, :user_id, :game_id, :entry_id, :entry_time, :entry_user_id, :tags, :reply_to, :text, :retweet_flag, :favorite_flag, :warning_flag, :delete_flag, :created_at, :updated_at, :created_at, :updated_at

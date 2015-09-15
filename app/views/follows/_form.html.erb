@@ -1,0 +1,53 @@
+<%= form_for(@follow) do |f| %>
+  <% if @follow.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@follow.errors.count, "error") %> prohibited this follow from being saved:</h2>
+
+      <ul>
+      <% @follow.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <select name="follow[user_id]" id="follow_user_id">
+      <% @users.each do |user| %>
+        <option value="<%= user.user_id %>"><%= user.user_id %></option>
+      <% end %>
+    </select>
+  </div>
+  <div class="field">
+    <%= f.label :game_id %><br>
+    <select name="follow[game_id]" id="follow_game_id">
+      <% @games.each do |game| %>
+        <option value="<%= game.game_id %>"><%= game.name %></option>
+      <% end %>
+    </select>
+  </div>
+  <div class="field">
+    <%= f.label :follow_user_id %><br>
+    <select name="follow[follow_user_id]" id="follow_user_id">
+      <% @users.each do |user| %>
+        <option value="<%= user.user_id %>"><%= user.user_id %></option>
+      <% end %>
+    </select>
+  </div>
+  <div class="field">
+    <%= f.label :delete_flag %><br>
+    <%= f.text_field :delete_flag %>
+  </div>
+  <div class="field">
+    <%= f.label :created_at %><br>
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br>
+    <%= f.datetime_select :updated_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event_id: 
+  game_id: 
+  name: 
+  description: 
+  tag_name: 
+  event_type: 
+  revival_event_id: 
+  start_date: 
+  finish_date: 
+  delete_flag: 
+  created_at: 
+  updated_at: 2015-08-28 09:57:23
+
+two:
+  event_id: 
+  game_id: 
+  name: 
+  description: 
+  tag_name: 
+  event_type: 
+  revival_event_id: 
+  start_date: 
+  finish_date: 
+  delete_flag: 
+  created_at: 
+  updated_at: 2015-08-28 09:57:23

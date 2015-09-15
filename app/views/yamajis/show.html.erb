@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @yamaji.name %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @yamaji.mail %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @yamaji.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_yamaji_path(@yamaji) %> |
+<%= link_to 'Back', yamajis_path %>

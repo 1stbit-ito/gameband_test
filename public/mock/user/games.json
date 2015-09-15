@@ -1,0 +1,28 @@
+{
+"ret"   : 1,
+"count"   : 2,
+"total"   : 2,
+"page"    : 1,
+"gamges"  : [
+{
+"game_id"   : 1,      
+"name"      : "パズル＆ドラゴンズ",
+"tag_name"    : "#パズドラ",
+"icon_image_path" : "/images/dog.jpeg",
+"header_image_path" : "/images/header1.jpg",
+"web_view_url"    : "pazzle_and_dragons",
+"created_at"    : "2015-06-01 00:00:00",
+"updated_at"    : "2015-06-01 00:00:10"
+},
+{
+"game_id"   : 2,
+"name"      : "モンスターストライク",
+"tag_name"    : "#モンスト",
+"icon_image_path" : "/images/cat.jpeg",
+"header_image_path" : "/images/header2.jpg",
+"web_view_url"    : "monster_strike",
+"created_at"    : "2015-06-01 00:01:00",
+"updated_at"    : "2015-06-01 00:03:00"
+}
+]
+}

@@ -1,0 +1,104 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Entry:</strong>
+  <%= @entry.entry_id %>
+</p>
+
+<p>
+  <strong>Entry time:</strong>
+  <%= @entry.entry_time %>
+</p>
+
+<p>
+  <strong>Entry user:</strong>
+  <%= @entry.entry_user_id %>
+</p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @entry.game_id %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @entry.content %>
+</p>
+
+<p>
+  <strong>Entry Tags IDs:</strong>
+  <%= @entry.entry_tags_ids %>
+</p>
+
+<p>
+  <strong>Reply to:</strong>
+  <%= @entry.reply_to %>
+</p>
+
+<p>
+  <strong>Entry type:</strong>
+  <%= @entry.entry_type %>
+</p>
+
+<p>
+  <strong>Parent:</strong>
+  <%= @entry.parent_id %>
+</p>
+
+<p>
+  <strong>Relation tag:</strong>
+  <%= @entry.relation_tag %>
+</p>
+
+<p>
+  <strong>Image path01:</strong>
+  <%= @entry.image_path01 %>
+</p>
+
+<p>
+  <strong>Image path02:</strong>
+  <%= @entry.image_path02 %>
+</p>
+
+<p>
+  <strong>Image path03:</strong>
+  <%= @entry.image_path03 %>
+</p>
+
+<p>
+  <strong>Image path04:</strong>
+  <%= @entry.image_path04 %>
+</p>
+
+<p>
+  <strong>Retweet num:</strong>
+  <%= @entry.retweet_num %>
+</p>
+
+<p>
+  <strong>Favorite num:</strong>
+  <%= @entry.favorite_num %>
+</p>
+
+<p>
+  <strong>Warning num:</strong>
+  <%= @entry.warning_num %>
+</p>
+
+<p>
+  <strong>Delete flag:</strong>
+  <%= @entry.delete_flag %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @entry.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @entry.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<%= link_to 'Back', entries_path %>

@@ -1,0 +1,41 @@
+<%= form_for(@follower) do |f| %>
+  <% if @follower.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@follower.errors.count, "error") %> prohibited this follower from being saved:</h2>
+
+      <ul>
+      <% @follower.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :game_id %><br>
+    <%= f.text_field :game_id %>
+  </div>
+  <div class="field">
+    <%= f.label :follower_user_id %><br>
+    <%= f.text_field :follower_user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :delete_flag %><br>
+    <%= f.text_field :delete_flag %>
+  </div>
+  <div class="field">
+    <%= f.label :created_at %><br>
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br>
+    <%= f.datetime_select :updated_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

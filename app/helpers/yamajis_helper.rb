@@ -1,0 +1,2 @@
+module YamajisHelper
+end

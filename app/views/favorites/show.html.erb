@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @favorite.user_id %>
+</p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @favorite.game_id %>
+</p>
+
+<p>
+  <strong>Entry:</strong>
+  <%= @favorite.entry_id %>
+</p>
+
+<p>
+  <strong>Delete flag:</strong>
+  <%= @favorite.delete_flag %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @favorite.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @favorite.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_favorite_path(@favorite) %> |
+<%= link_to 'Back', favorites_path %>

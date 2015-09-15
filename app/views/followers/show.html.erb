@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @follower.user_id %>
+</p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @follower.game_id %>
+</p>
+
+<p>
+  <strong>Follower user:</strong>
+  <%= @follower.follower_user_id %>
+</p>
+
+<p>
+  <strong>Delete flag:</strong>
+  <%= @follower.delete_flag %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @follower.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @follower.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_follower_path(@follower) %> |
+<%= link_to 'Back', followers_path %>

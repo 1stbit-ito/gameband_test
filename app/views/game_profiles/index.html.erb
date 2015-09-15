@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Game Profiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Game</th>
+      <th>Comment</th>
+      <th>Image path01</th>
+      <th>Image path02</th>
+      <th>Image path03</th>
+      <th>Image path04</th>
+      <th>Value01</th>
+      <th>Value02</th>
+      <th>Value03</th>
+      <th>Value04</th>
+      <th>Value05</th>
+      <th>Value06</th>
+      <th>Value07</th>
+      <th>Value08</th>
+      <th>Value09</th>
+      <th>Value10</th>
+      <th>Delete flag</th>
+      <th>Created at</th>
+      <th>Updated at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @game_profiles.each do |game_profile| %>
+      <tr>
+        <td><%= game_profile.user_id %></td>
+        <td><%= game_profile.game_id %></td>
+        <td><%= game_profile.comment %></td>
+        <td><%= game_profile.image_path01 %></td>
+        <td><%= game_profile.image_path02 %></td>
+        <td><%= game_profile.image_path03 %></td>
+        <td><%= game_profile.image_path04 %></td>
+        <td><%= game_profile.value01 %></td>
+        <td><%= game_profile.value02 %></td>
+        <td><%= game_profile.value03 %></td>
+        <td><%= game_profile.value04 %></td>
+        <td><%= game_profile.value05 %></td>
+        <td><%= game_profile.value06 %></td>
+        <td><%= game_profile.value07 %></td>
+        <td><%= game_profile.value08 %></td>
+        <td><%= game_profile.value09 %></td>
+        <td><%= game_profile.value10 %></td>
+        <td><%= game_profile.delete_flag %></td>
+        <td><%= game_profile.created_at %></td>
+        <td><%= game_profile.updated_at %></td>
+        <td><%= link_to 'Show', game_profile %></td>
+        <td><%= link_to 'Edit', edit_game_profile_path(game_profile) %></td>
+        <td><%= link_to 'Destroy', game_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Game profile', new_game_profile_path %>

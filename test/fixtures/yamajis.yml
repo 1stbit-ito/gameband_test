@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 
+  mail: 
+  updated_at: 2015-08-25 17:51:20
+
+two:
+  name: 
+  mail: 
+  updated_at: 2015-08-25 17:51:20

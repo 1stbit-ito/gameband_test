@@ -1,0 +1,53 @@
+<%= form_for(@favorite) do |f| %>
+  <% if @favorite.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@favorite.errors.count, "error") %> prohibited this favorite from being saved:</h2>
+
+      <ul>
+      <% @favorite.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <select name="favorite[user_id]" id="favorite_user_id">
+      <% @users.each do |user| %>
+        <option value="<%= user.user_id %>"><%= user.user_id %></option>
+      <% end %>
+    </select>
+  </div>
+<!--
+  <div class="field">
+    <%= f.label :game_id %><br>
+    <%= f.number_field :game_id %>
+  </div>
+-->
+  <div class="field">
+    <%= f.label :entry_id %><br>
+    <select name="favorite[entry_id]" id="favorite_entry_id">
+      <% @entries.each do |entry| %>
+        <option value="<%= entry.entry_id %>"><%= entry.entry_id %></option>
+      <% end %>
+    </select>
+  </div>
+<!--
+  <div class="field">
+    <%= f.label :delete_flag %><br>
+    <%= f.check_box :delete_flag %>
+  </div>
+  <div class="field">
+    <%= f.label :created_at %><br>
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br>
+    <%= f.datetime_select :updated_at %>
+  </div>
+-->
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

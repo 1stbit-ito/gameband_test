@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  game_id: 
+  follower_user_id: 
+  delete_flag: 
+  created_at: 
+  updated_at: 2015-08-28 08:43:00
+
+two:
+  user_id: 
+  game_id: 
+  follower_user_id: 
+  delete_flag: 
+  created_at: 
+  updated_at: 2015-08-28 08:43:00

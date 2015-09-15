@@ -1,0 +1,1 @@
+json.extract! @game_profile, :id, :user_id, :game_id, :comment, :image_path01, :image_path02, :image_path03, :image_path04, :value01, :value02, :value03, :value04, :value05, :value06, :value07, :value08, :value09, :value10, :delete_flag, :created_at, :updated_at, :created_at, :updated_at

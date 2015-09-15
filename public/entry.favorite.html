@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTMLファイルからPOSTでJSONデータを送信する</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        $("#response").html("Response Values");
+
+        $("#button").click( function(){
+            var url = $("#url_post").val();
+            
+            var JSONdata = {
+              "favorite" : {
+                "user_id" : $("#user_id").val(),
+                "entry_id" : $("#entry_id").val(),
+              },
+            };
+
+
+
+//          alert(JSON.stringify(JSONdata));
+
+            $.ajax({
+                type : 'post',
+                url : url,
+                data : JSON.stringify(JSONdata),
+                contentType: 'application/JSON',
+                dataType : 'JSON',
+                scriptCharset: 'utf-8',
+                success : function(data) {
+
+                    // Success
+//                    alert("success");
+//                    alert(JSON.stringify(data));
+                    $("#response").html(JSON.stringify(data));
+                },
+                error : function(data) {
+
+                    // Error
+                    alert("error");
+                    alert(JSON.stringify(data));
+                    $("#response").html(JSON.stringify(data));
+                }
+            });
+        })
+    })
+</script>
+
+</head>
+<body>
+    <h1>HTMLファイルからPOSTでJSONデータを送信する</h1>
+    <p>URL: <input type="text" id="url_post" name="url" size="100" value="http://192.168.33.172/favorite/add"></p>
+    <p>USER_ID: <input type="text" id="user_id" size="30" name="favorite[user_id]" value="0f47d3e13b180136"></p>
+    <p>ENTRY_ID: <input type="text" id="entry_id" size="30" name="favorite[entry_id]" value=""></p>
+    <p><button id="button" type="button">submit</button></p>
+    <textarea id="response" cols=120 rows=10 disabled></textarea>
+</body>
+</html>

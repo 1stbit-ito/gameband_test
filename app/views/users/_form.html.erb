@@ -1,0 +1,68 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<!--
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+-->
+<div class="field">
+    <%= f.label :login_id %><br>
+    <%= f.text_field :login_id %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :client_id %><br>
+    <%= f.text_field :client_id %>
+  </div>
+  <div class="field">
+    <%= f.label :nickname %><br>
+    <%= f.text_field :nickname %>
+  </div>
+<!--
+<div class="field">
+    <%= f.label :image_path01 %><br>
+    <%= f.text_field :image_path01 %>
+  </div>
+  <div class="field">
+    <%= f.label :image_path02 %><br>
+    <%= f.text_field :image_path02 %>
+  </div>
+  <div class="field">
+    <%= f.label :image_path03 %><br>
+    <%= f.text_field :image_path03 %>
+  </div>
+  <div class="field">
+    <%= f.label :image_path04 %><br>
+    <%= f.text_field :image_path04 %>
+  </div>
+  <div class="field">
+    <%= f.label :delete_flag %><br>
+    <%= f.check_box :delete_flag %>
+  </div>
+  <div class="field">
+    <%= f.label :created_at %><br>
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br>
+    <%= f.datetime_select :updated_at %>
+  </div>
+-->
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ゲーム</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        $("#response").html("Response Values");
+
+        $("#button").click( function(){
+            var url = $("#url_post").val();
+
+                var JSONdata = {
+                    "game" : {
+                      "name" : $("#game_name").val(),
+                      "description" : $("#game_description").val(),
+                      "tag_name" : $("#game_tag_name").val(),
+                      "profile_key_name01" : $("#profile_key_name01").val(),
+                      "profile_key_name02" : $("#profile_key_name02").val(),
+                      "profile_key_name03" : $("#profile_key_name03").val(),
+                    }
+                };
+
+//          alert(JSON.stringify(JSONdata));
+
+            $.ajax({
+                type : 'post',
+                url : url,
+                data : JSON.stringify(JSONdata),
+                contentType: 'application/JSON',
+                dataType : 'JSON',
+                scriptCharset: 'utf-8',
+                success : function(data) {
+
+                    // Success
+//                    alert("success");
+//                    alert(JSON.stringify(data));
+                    $("#response").html(JSON.stringify(data));
+                },
+                error : function(data) {
+
+                    // Error
+//                    alert("error");
+//                    alert(JSON.stringify(data));
+                    $("#response").html(JSON.stringify(data));
+                }
+            });
+        })
+    })
+</script>
+
+</head>
+<body>
+    <h1>ゲーム</h1>
+    <p>URL: <input type="text" id="url_post" name="url" size="100" value="http://192.168.33.172/games"></p>
+    <p>ゲーム名: <input type="text" id="game_name" size="30" name="game[name]" value=""></p>
+    <p>ゲーム説明: <input type="text" id="game_description" size="30" name="game[description]" value=""></p>
+    <p>タグ名: <input type="text" id="game_tag_name" size="30" name="game[tag_name]" value="#"></p>
+    <p>プロフィール1: <input type="text" id="profile_key_name01" size="30" name="game[profile_key_name01]" value="ID"></p>
+    <p>プロフィール2: <input type="text" id="profile_key_name02" size="30" name="game[profile_key_name02]" value="RANK"></p>
+    <p>プロフィール3: <input type="text" id="profile_key_name03" size="30" name="game[profile_key_name03]" value="一言"></p>
+    <p><button id="button" type="button">submit</button></p>
+    <textarea id="response" cols=120 rows=10 disabled></textarea>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<%= form_for(@game) do |f| %>
+  <% if @game.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@game.errors.count, "error") %> prohibited this game from being saved:</h2>
+
+      <ul>
+      <% @game.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :game_id %><br>
+    <%= f.text_field :game_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :tag_name %><br>
+    <%= f.text_field :tag_name %>
+  </div>
+  <div class="field">
+    <%= f.label :icon_image_path %><br>
+    <%= f.text_field :icon_image_path %>
+  </div>
+  <div class="field">
+    <%= f.label :header_image_path %><br>
+    <%= f.text_field :header_image_path %>
+  </div>
+  <div class="field">
+    <%= f.label :web_view_url %><br>
+    <%= f.text_field :web_view_url %>
+  </div>
+  <div class="field">
+    <%= f.label :profile_key_name01 %><br>
+    <%= f.text_field :profile_key_name01 %>
+  </div>
+  <div class="field">
+    <%= f.label :profile_key_name02 %><br>
+    <%= f.text_field :profile_key_name02 %>
+  </div>
+  <div class="field">
+    <%= f.label :profile_key_name03 %><br>
+    <%= f.text_field :profile_key_name03 %>
+  </div>
+  <div class="field">
+    <%= f.label :profile_key_name04 %><br>
+    <%= f.text_field :profile_key_name04 %>
+  </div>
+  <div class="field">
+    <%= f.label :profile_key_name05 %><br>
+    <%= f.text_field :profile_key_name05 %>
+  </div>
+  <div class="field">
+    <%= f.label :profile_key_name06 %><br>
+    <%= f.text_field :profile_key_name06 %>
+  </div>
+  <div class="field">
+    <%= f.label :profile_key_name07 %><br>
+    <%= f.text_field :profile_key_name07 %>
+  </div>
+  <div class="field">
+    <%= f.label :profile_key_name08 %><br>
+    <%= f.text_field :profile_key_name08 %>
+  </div>
+  <div class="field">
+    <%= f.label :profile_key_name09 %><br>
+    <%= f.text_field :profile_key_name09 %>
+  </div>
+  <div class="field">
+    <%= f.label :profile_key_name10 %><br>
+    <%= f.text_field :profile_key_name10 %>
+  </div>
+  <div class="field">
+    <%= f.label :play_start_date %><br>
+    <%= f.date_select :play_start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :login_start_time %><br>
+    <%= f.text_field :login_start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :login_finish_time %><br>
+    <%= f.text_field :login_finish_time %>
+  </div>
+  <div class="field">
+    <%= f.label :delete_flag %><br>
+    <%= f.check_box :delete_flag %>
+  </div>
+  <div class="field">
+    <%= f.label :created_at %><br>
+    <%= f.datetime_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br>
+    <%= f.datetime_select :updated_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

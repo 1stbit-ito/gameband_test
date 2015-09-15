@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  entry_id: MyString
+  entry_time: 2015-08-31 02:33:21
+  entry_user_id: MyString
+  game_id: 1
+  content: MyText
+  tags: MyText
+  reply_to: MyText
+  entry_type: false
+  parent_id: MyString
+  relation_tag: MyText
+  image_path01: MyText
+  image_path02: MyText
+  image_path03: MyText
+  image_path04: MyText
+  retweet_num: 1
+  favorite_num: 1
+  warning_num: 1
+  delete_flag: false
+  created_at: 2015-08-31 02:33:21
+  updated_at: 2015-08-31 02:33:21
+
+two:
+  entry_id: MyString
+  entry_time: 2015-08-31 02:33:21
+  entry_user_id: MyString
+  game_id: 1
+  content: MyText
+  tags: MyText
+  reply_to: MyText
+  entry_type: false
+  parent_id: MyString
+  relation_tag: MyText
+  image_path01: MyText
+  image_path02: MyText
+  image_path03: MyText
+  image_path04: MyText
+  retweet_num: 1
+  favorite_num: 1
+  warning_num: 1
+  delete_flag: false
+  created_at: 2015-08-31 02:33:21
+  updated_at: 2015-08-31 02:33:21

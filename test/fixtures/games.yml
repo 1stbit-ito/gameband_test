@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  game_id: 
+  name: 
+  description: 
+  tag_name: 
+  icon_image_path: 
+  header_image_path: 
+  web_view_url: 
+  profile_key_name01: 
+  profile_key_name02: 
+  profile_key_name03: 
+  profile_key_name04: 
+  profile_key_name05: 
+  profile_key_name06: 
+  profile_key_name07: 
+  profile_key_name08: 
+  profile_key_name09: 
+  profile_key_name10: 
+  play_start_date: 
+  login_start_time: 
+  login_finish_time: 
+  created_at: 
+  updated_at: 2015-08-28 09:01:00
+
+two:
+  game_id: 
+  name: 
+  description: 
+  tag_name: 
+  icon_image_path: 
+  header_image_path: 
+  web_view_url: 
+  profile_key_name01: 
+  profile_key_name02: 
+  profile_key_name03: 
+  profile_key_name04: 
+  profile_key_name05: 
+  profile_key_name06: 
+  profile_key_name07: 
+  profile_key_name08: 
+  profile_key_name09: 
+  profile_key_name10: 
+  play_start_date: 
+  login_start_time: 
+  login_finish_time: 
+  created_at: 
+  updated_at: 2015-08-28 09:01:00

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Yamajis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Mail</th>
+      <th>Updated at</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @yamajis.each do |yamaji| %>
+      <tr>
+        <td><%= yamaji.name %></td>
+        <td><%= yamaji.mail %></td>
+        <td><%= yamaji.updated_at %></td>
+        <td><%= link_to 'Show', yamaji %></td>
+        <td><%= link_to 'Edit', edit_yamaji_path(yamaji) %></td>
+        <td><%= link_to 'Destroy', yamaji, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Yamaji', new_yamaji_path %>

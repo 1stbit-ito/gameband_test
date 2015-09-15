@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: MyString
+  game_id: 1
+  entry_id: MyString
+  delete_flag: false
+  created_at: 2015-08-31 01:19:58
+  updated_at: 2015-08-31 01:19:58
+
+two:
+  user_id: MyString
+  game_id: 1
+  entry_id: MyString
+  delete_flag: false
+  created_at: 2015-08-31 01:19:58
+  updated_at: 2015-08-31 01:19:58

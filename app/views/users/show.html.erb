@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @user.user_id %>
+</p>
+
+<p>
+  <strong>Login:</strong>
+  <%= @user.login_id %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @user.password %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @user.client_id %>
+</p>
+
+<p>
+  <strong>Nickname:</strong>
+  <%= @user.nickname %>
+</p>
+
+<p>
+  <strong>Image path01:</strong>
+  <%= @user.image_path01 %>
+</p>
+
+<p>
+  <strong>Image path02:</strong>
+  <%= @user.image_path02 %>
+</p>
+
+<p>
+  <strong>Image path03:</strong>
+  <%= @user.image_path03 %>
+</p>
+
+<p>
+  <strong>Image path04:</strong>
+  <%= @user.image_path04 %>
+</p>
+
+<p>
+  <strong>Delete flag:</strong>
+  <%= @user.delete_flag %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @user.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @user.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
