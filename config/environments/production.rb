@@ -76,4 +76,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Session store ElastiCach(Redis)
+  config.session_store :redis_store, servers: 'redis://gameband-redis-001.aqbg8i.0001.apne1.cache.amazonaws.com:6379/2', expire_in: 1.day
+
 end

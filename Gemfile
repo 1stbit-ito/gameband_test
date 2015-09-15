@@ -52,6 +52,9 @@ end
 gem 'therubyracer'
 gem 'unicorn'
 
+gem 'redis'
+gem 'redis-rails'
+
 group :development, :test do
   gem 'capistrano'
   gem 'capistrano-rails'

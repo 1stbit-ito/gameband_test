@@ -38,4 +38,7 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # Session store ElastiCach(Redis)
+  config.session_store :redis_store, servers: 'redis://gameband-redis-001.aqbg8i.0001.apne1.cache.amazonaws.com:6379/0', expire_in: 1.day
 end
