@@ -51,3 +51,13 @@ end
 
 gem 'therubyracer'
 gem 'unicorn'
+
+group :development, :test do
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano3-unicorn'
+  gem 'aws-sdk'
+end
+

@@ -11,6 +11,18 @@ namespace :unicorn do
     sh "bundle exec unicorn_rails -c #{config} -E local -D"
   }
 
+  desc "Start unicorn for staging env."
+  task(:staging) {
+    config = Rails.root.join('config', 'unicorn.rb')
+    sh "bundle exec unicorn_rails -c #{config} -E staging -D"
+  }
+
+  desc "Start unicorn for production env."
+  task(:production) {
+    config = Rails.root.join('config', 'unicorn.rb')
+    sh "bundle exec unicorn_rails -c #{config} -E production -D"
+  }
+
   desc "Start unicorn for dev env."
   task(:dev) {
     config = Rails.root.join('config', 'unicorn.rb')
@@ -48,7 +60,8 @@ namespace :unicorn do
 
   def unicorn_pid
     begin
-      File.read("/home/gameband/api/tmp/unicorn.pid").to_i
+      current_path = Rails.root
+      File.read("#{current_path}/tmp/unicorn.pid").to_i
     rescue Errno::ENOENT
       raise "Unicorn doesn't seem to be running"
     end
@@ -56,7 +69,8 @@ namespace :unicorn do
 
   def unicorn_old_pid
     begin
-      File.read("/home/gameband/api/tmp/unicorn.pid.oldbin").to_i
+      current_path = Rails.root
+      File.read("#{current_path}/tmp/unicorn.pid").to_i
     rescue Errno::ENOENT
       raise "unicorn.pid.oldbin is not found."
     end

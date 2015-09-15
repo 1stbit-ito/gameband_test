@@ -33,7 +33,7 @@ local:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: api_test
+  database: gameband_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -54,8 +54,14 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+staging:
+  <<: *default
+  database: gameband_staging
+  username: gameband
+  password: <%= ENV['GAMEBAND_API_DATABASE_PASSWORD'] %>
+
 production:
   <<: *default
-  database: api_production
-  username: api
-  password: <%= ENV['API_DATABASE_PASSWORD'] %>
+  database: gameband_production
+  username: gameband
+  password: <%= ENV['GAMEBAND_API_DATABASE_PASSWORD'] %>
