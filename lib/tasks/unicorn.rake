@@ -69,18 +69,18 @@ namespace :unicorn do
 
   def unicorn_pid
     begin
-      current_path = Rails.root.join('')
-      if File.exist?("#{current_path}/tmp/unicorn.pid")
-        File.read("#{current_path}/tmp/unicorn.pid").to_i
+      pid_file_path = Rails.root.join('tmp', 'unicorn.pid')
+      if File.exist?(pid_file_path)
+        File.read(pid_file_path).to_i
       end
     end
   end
 
   def unicorn_old_pid
     begin
-      current_path = Rails.root.join('')
-      if File.exist?("#{current_path}/tmp/unicorn.pid.oldbin")
-        File.read("#{current_path}/tmp/unicorn.pid.oldbin").to_i
+      old_pid_file_path = Rails.root.join('tmp', 'unicorn.pid.oldbin')
+      if File.exist?("#{old_pid_file_path}")
+        File.read("#{old_pid_file_path}").to_i
       end
     end
   end
