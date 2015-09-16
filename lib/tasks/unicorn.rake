@@ -1,4 +1,5 @@
 namespace :unicorn do
+
   desc "Start unicorn for development env."
   task(:start) {
     config = Rails.root.join('config', 'unicorn.rb')
@@ -51,28 +52,36 @@ namespace :unicorn do
   end
 
   def unicorn_signal signal
-    Process.kill signal, unicorn_pid
+    if unicorn_pid.nil? then
+      print "Unicorn doesn't seem to be running!\n"
+    else
+      Process.kill signal, unicorn_pid
+    end
   end
 
   def unicorn_old_signal signal
-    Process.kill signal, unicorn_old_pid
+    if unicorn_old_pid.nil? then
+      print "unicorn.pid.oldbin is not found.\n"
+    else
+      Process.kill signal, unicorn_old_pid
+    end
   end
 
   def unicorn_pid
     begin
-      current_path = Rails.root
-      File.read("#{current_path}/tmp/unicorn.pid").to_i
-    rescue Errno::ENOENT
-      raise "Unicorn doesn't seem to be running"
+      current_path = Rails.root.join('')
+      if File.exist?("#{current_path}/tmp/unicorn.pid")
+        File.read("#{current_path}/tmp/unicorn.pid").to_i
+      end
     end
   end
 
   def unicorn_old_pid
     begin
-      current_path = Rails.root
-      File.read("#{current_path}/tmp/unicorn.pid").to_i
-    rescue Errno::ENOENT
-      raise "unicorn.pid.oldbin is not found."
+      current_path = Rails.root.join('')
+      if File.exist?("#{current_path}/tmp/unicorn.pid.oldbin")
+        File.read("#{current_path}/tmp/unicorn.pid.oldbin").to_i
+      end
     end
   end
 end
